@@ -1,0 +1,26 @@
+{
+  "name": "spott-nodejs-sdk",
+  "version": "1.0.0",
+  "description": "NodeJS SDK for Spott API",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha test/index.js test/unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spott-dev/nodejs-sdk.git"
+  },
+  "keywords": [
+    "Spott",
+    "API",
+    "SDK",
+    "geographical",
+    "places"
+  ],
+  "author": "Spott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spott-dev/nodejs-sdk/issues"
+  },
+  "homepage": "https://github.com/spott-dev/nodejs-sdk#readme"
+}
