@@ -1,6 +1,6 @@
 {
   "name": "spott-nodejs-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NodeJS SDK for Spott API",
   "main": "src/index.js",
   "scripts": {
@@ -24,8 +24,7 @@
   },
   "homepage": "https://github.com/spott-dev/nodejs-sdk#readme",
   "dependencies": {
-    "axios": "^0.19.0",
-    "lodash.isarray": "^4.0.0"
+    "axios": "^0.19.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
