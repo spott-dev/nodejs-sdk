@@ -44,7 +44,7 @@ Returns a list of places (either countries, cities or administrative divisions) 
 It's an abstraction of Spott endpoint: `GET /places`.
 
 
-**Paramters**
+**Parameters**
 
 | Paramter | Type | Description |
 | -------- | ---- | ----------- |
@@ -149,7 +149,7 @@ Returns a list of places matching a prefix and specified filter properties. Usef
 It's an abstraction of Spott endpoint: `GET /places/autocomplete`.
 
 
-**Paramters**
+**Parameters**
 
 | Paramter | Type | Description |
 | -------- | ---- | ----------- |
@@ -265,7 +265,7 @@ Returns a single Place identified by an ID.
 It's an abstraction of Spott endpoint: `GET /places/:id`.
 
 
-**Paramters**
+**Parameters**
 
 | Paramter | Type | Description |
 | -------- | ---- | ----------- |
@@ -333,7 +333,7 @@ Returns a single Place identified by a [Geonames](https://www.geonames.org/) ID.
 It's an abstraction of Spott endpoint: `GET /places/geoname-id/:geonameId`.
 
 
-**Paramters**
+**Parameters**
 
 | Paramter | Type | Description |
 | -------- | ---- | ----------- |
@@ -393,7 +393,7 @@ Returns the Place where a given IP Address is located.
 It's an abstraction of Spott endpoint: `GET /places/ip/:ip`.
 
 
-**Paramters**
+**Parameters**
 
 | Paramter | Type | Description |
 | -------- | ---- | ----------- |
@@ -465,7 +465,7 @@ Returns the Place related to the IP where the request comes from.
 It's an abstraction of Spott endpoint: `GET /places/ip/me`.
 
 
-**Paramters**
+**Parameters**
 
 | Paramter | Type | Description |
 | -------- | ---- | ----------- |
