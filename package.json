@@ -22,5 +22,16 @@
   "bugs": {
     "url": "https://github.com/spott-dev/nodejs-sdk/issues"
   },
-  "homepage": "https://github.com/spott-dev/nodejs-sdk#readme"
+  "homepage": "https://github.com/spott-dev/nodejs-sdk#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "lodash.isarray": "^4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "nock": "^11.7.0",
+    "proxyquire": "^2.1.3",
+    "sinon": "^7.5.0"
+  }
 }

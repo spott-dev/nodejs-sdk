@@ -36,7 +36,7 @@ const spott = new SpottSDK(API_KEY);
 
 ## API
 
-### .getPlaces(query, options)
+### .searchPlaces(query, options)
 
 Returns a list of places (either countries, cities or administrative divisions) matching a query and filtered by properties.
 
@@ -49,7 +49,7 @@ It's an abstraction of Spott endpoint: `GET /places`.
 |`query`|String|Query string to find places with a similar name.|
 |`options`|Object|Object with modifiers for the call.|
 
-Where `options` object accepts the following parameters:
+Where `options` is an object that accepts the following parameters:
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
@@ -69,11 +69,13 @@ Where `options` object accepts the following parameters:
 ```js
 const options = {
   types: ['CITY'],
-  countries: ['US', 'CANADA']
+  countries: ['US', 'CA']
 };
-const country = await spott.getPlaces('Toronto', options);
+
+const places = await spott.searchPlaces('Toronto', options);
 
 /*
+console.log(places);
 Prints:
 
 [
@@ -148,7 +150,7 @@ It's an abstraction of Spott endpoint: `GET /places/autocomplete`.
 |`query`|String|Query string to find places which name starts with this prefix.|
 |`options`|Object|Object with modifiers for the call.|
 
-Where `options` object accepts the following parameters:
+Where `options` is an object that accepts the following parameters:
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
@@ -169,9 +171,11 @@ Where `options` object accepts the following parameters:
 const options = {
   types: ['CITY']
 };
-const country = await spott.autocompletePlaces('to', options);
+
+const places = await spott.autocompletePlaces('to', options);
 
 /*
+console.log(places);
 Prints:
 
 [
@@ -259,7 +263,7 @@ It's an abstraction of Spott endpoint: `GET /places/:id`.
 |`id`|String|ID of the Place.|
 |`options`|Object|Object with modifiers for the call.|
 
-Where `options` object accepts the following parameters:
+Where `options` is an object that accepts the following parameters:
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
@@ -271,9 +275,11 @@ Where `options` object accepts the following parameters:
 const options = {
   language: 'ar' // Arabic
 };
-const country = await spott.getPlaceById('US', options);
+
+const place = await spott.getPlaceById('US', options);
 
 /*
+console.log(place);
 Prints:
 
 {
@@ -281,6 +287,7 @@ Prints:
   "geonameId": 6252001,
   "type": "COUNTRY",
   "name": "United States of America",
+  "localizedName": "الولايات المتحدة الأمريكية",
   "population": 310232863,
   "elevation": 543,
   "timezoneId": null,
@@ -295,7 +302,9 @@ Prints:
   "postalCodeRegex": "^\\d{5}(-\\d{4})?$",
   "phoneCodes": ["+1"],
   "languages": ["en", "es", "haw", "fr"],
-  "locales": ["en-US", "es-US", "haw", "fr"],"neighbourCountryIds": ["CA", "MX", "CU"],"localizedName": "الولايات المتحدة الأمريكية","areaSqKm": 9629091,
+  "locales": ["en-US", "es-US", "haw", "fr"],
+  "neighbourCountryIds": ["CA", "MX", "CU"],
+  "areaSqKm": 9629091,
   "coordinates": {
     "latitude": 39.76,
     "longitude": -98.5
@@ -318,7 +327,7 @@ It's an abstraction of Spott endpoint: `GET /places/geoname-id/:geonameId`.
 |`geonameId`|String|[Geonames](https://www.geonames.org/) ID of the Place.|
 |`options`|Object|Object with modifiers for the call.|
 
-Where `options` object accepts the following parameters:
+Where `options` is an object that accepts the following parameters:
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
@@ -330,9 +339,11 @@ Where `options` object accepts the following parameters:
 const options = {
   language: 'zh' // Chinese
 };
-const country = await spott.getPlaceByGeonameId('5332921', options);
+
+const place = await spott.getPlaceByGeonameId('5332921', options);
 
 /*
+console.log(place);
 Prints:
 
 {
@@ -372,7 +383,7 @@ It's an abstraction of Spott endpoint: `GET /places/ip/:ip`.
 |`ip`|String|IP Address (v4 and v6 are supported).|
 |`options`|Object|Object with modifiers for the call.|
 
-Where `options` object accepts the following parameters:
+Where `options` is an object that accepts the following parameters:
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
@@ -384,9 +395,11 @@ Where `options` object accepts the following parameters:
 const options = {
   language: 'ru' // Russian
 };
-const country = await spott.getPlaceByIp('200.194.51.97', options);
+
+const place = await spott.getPlaceByIp('200.194.51.97', options);
 
 /*
+console.log(place);
 Prints:
 
 {
@@ -437,7 +450,7 @@ It's an abstraction of Spott endpoint: `GET /places/ip/me`.
 | -------- | ---- | ----------- |
 |`options`|Object|Object with modifiers for the call.|
 
-Where `options` object accepts the following parameters:
+Where `options` is an object that accepts the following parameters:
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
@@ -447,11 +460,13 @@ Where `options` object accepts the following parameters:
 
 ```js
 const options = {
-  language: 'ru' // Russian
+  language: 'fr' // French
 };
-const country = await spott.getPlaceByMyIp(options);
+
+const place = await spott.getPlaceByMyIp(options);
 
 /*
+console.log(place);
 Prints:
 
 {
