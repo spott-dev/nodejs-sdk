@@ -16,14 +16,15 @@ class Fetcher {
     const headers = getHeaders(this.apiKey);
 
     const params = {
-      query,
       headers,
       url: path,
+      params: query,
       method: 'get',
       baseURL: BASE_URL
     };
 
-    return axios(params);
+    return axios(params)
+      .then(handleSuccessResponse);
   }
 }
 
@@ -33,5 +34,9 @@ function getHeaders(apiKey) {
     [API_KEY_HEADER_NAME]: apiKey
   };
 };
+
+function handleSuccessResponse(response) {
+  return response.data;
+}
 
 module.exports = Fetcher;
