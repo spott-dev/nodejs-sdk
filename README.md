@@ -36,11 +36,13 @@ const spott = new SpottSDK(API_KEY);
 
 ## API
 
+
 ### .searchPlaces(query, options)
 
 Returns a list of places (either countries, cities or administrative divisions) matching a query and filtered by properties.
 
 It's an abstraction of Spott endpoint: `GET /places`.
+
 
 **Paramters**
 
@@ -48,6 +50,7 @@ It's an abstraction of Spott endpoint: `GET /places`.
 | -------- | ---- | ----------- |
 |`query`|String|Query string to find places with a similar name.|
 |`options`|Object|Object with modifiers for the call.|
+
 
 Where `options` is an object that accepts the following parameters:
 
@@ -63,6 +66,7 @@ Where `options` is an object that accepts the following parameters:
 |`language`|String|Specifies a language [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to get the localized name of the place. If the translation is not available, "localizedName" property will be null.|
 |`skip`|Number|Amount of places to ignore before beginning to return results. Used together with "limit" to paginate results.|
 |`limit`|Number|Maximum number of places to return. Used together with "skip" to paginate results.|
+
 
 **Example**
 
@@ -137,11 +141,13 @@ Prints:
 */
 ```
 
+
 ### .autocompletePlaces(query, options)
 
 Returns a list of places matching a prefix and specified filter properties. Useful to create "search as you type" inputs.
 
 It's an abstraction of Spott endpoint: `GET /places/autocomplete`.
+
 
 **Paramters**
 
@@ -149,6 +155,7 @@ It's an abstraction of Spott endpoint: `GET /places/autocomplete`.
 | -------- | ---- | ----------- |
 |`query`|String|Query string to find places which name starts with this prefix.|
 |`options`|Object|Object with modifiers for the call.|
+
 
 Where `options` is an object that accepts the following parameters:
 
@@ -164,6 +171,7 @@ Where `options` is an object that accepts the following parameters:
 |`language`|String|Specifies a language [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to get the localized name of the place. If the translation is not available, "localizedName" property will be null.|
 |`skip`|Number|Amount of places to ignore before beginning to return results. Used together with "limit" to paginate results.|
 |`limit`|Number|Maximum number of places to return. Used together with "skip" to paginate results.|
+
 
 **Example**
 
@@ -256,6 +264,7 @@ Returns a single Place identified by an ID.
 
 It's an abstraction of Spott endpoint: `GET /places/:id`.
 
+
 **Paramters**
 
 | Paramter | Type | Description |
@@ -263,11 +272,13 @@ It's an abstraction of Spott endpoint: `GET /places/:id`.
 |`id`|String|ID of the Place.|
 |`options`|Object|Object with modifiers for the call.|
 
+
 Where `options` is an object that accepts the following parameters:
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
 |`language`|String|Specifies a language [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to get the localized name of the place. If the translation is not available, "localizedName" property will be null.|
+
 
 **Example**
 
@@ -314,11 +325,13 @@ Prints:
 */
 ```
 
+
 ### .getPlaceByGeonameId(geonameId, options)
 
 Returns a single Place identified by a [Geonames](https://www.geonames.org/) ID.
 
 It's an abstraction of Spott endpoint: `GET /places/geoname-id/:geonameId`.
+
 
 **Paramters**
 
@@ -327,11 +340,13 @@ It's an abstraction of Spott endpoint: `GET /places/geoname-id/:geonameId`.
 |`geonameId`|String|[Geonames](https://www.geonames.org/) ID of the Place.|
 |`options`|Object|Object with modifiers for the call.|
 
+
 Where `options` is an object that accepts the following parameters:
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
 |`language`|String|Specifies a language [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to get the localized name of the place. If the translation is not available, "localizedName" property will be null.|
+
 
 **Example**
 
@@ -370,11 +385,13 @@ Prints:
 */
 ```
 
+
 ### .getPlaceByIp(ip, options)
 
 Returns the Place where a given IP Address is located.
 
 It's an abstraction of Spott endpoint: `GET /places/ip/:ip`.
+
 
 **Paramters**
 
@@ -383,11 +400,13 @@ It's an abstraction of Spott endpoint: `GET /places/ip/:ip`.
 |`ip`|String|IP Address (v4 and v6 are supported).|
 |`options`|Object|Object with modifiers for the call.|
 
+
 Where `options` is an object that accepts the following parameters:
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
 |`language`|String|Specifies a language [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to get the localized name of the place. If the translation is not available, "localizedName" property will be null.|
+
 
 **Example**
 
@@ -438,11 +457,13 @@ Prints:
 */
 ```
 
+
 ### .getPlaceByMyIp(options)
 
 Returns the Place related to the IP where the request comes from.
 
 It's an abstraction of Spott endpoint: `GET /places/ip/me`.
+
 
 **Paramters**
 
@@ -450,11 +471,13 @@ It's an abstraction of Spott endpoint: `GET /places/ip/me`.
 | -------- | ---- | ----------- |
 |`options`|Object|Object with modifiers for the call.|
 
+
 Where `options` is an object that accepts the following parameters:
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
 |`language`|String|Specifies a language [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to get the localized name of the place. If the translation is not available, "localizedName" property will be null.|
+
 
 **Example**
 
@@ -504,6 +527,7 @@ Prints:
 
 */
 ```
+
 
 ## LICENSE
 
