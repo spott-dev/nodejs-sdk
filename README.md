@@ -1,4 +1,4 @@
-# Spott NodeJS SDK
+# NodeJS SDK for Spott
 ![](https://img.shields.io/badge/build-passing-green?style=flat)
 ![](https://img.shields.io/dub/l/vibe-d?color=blue?style=flat)
 
@@ -529,6 +529,6 @@ Prints:
 ```
 
 
-## LICENSE
+## License
 
 MIT

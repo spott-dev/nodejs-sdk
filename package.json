@@ -1,6 +1,6 @@
 {
   "name": "spott-nodejs-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "NodeJS SDK for Spott API",
   "main": "src/index.js",
   "scripts": {
@@ -15,7 +15,9 @@
     "API",
     "SDK",
     "geographical",
-    "places"
+    "places",
+    "cities",
+    "countries"
   ],
   "author": "Spott",
   "license": "MIT",
